@@ -30,6 +30,7 @@ Montado e testado em 19/10/2026. As migrações desta pasta já estão aplicadas
 | Aceite da política de privacidade no 1º acesso | `rpc('record_privacy_consent', { p_user_agent })` |
 | Enviar quiz | `rpc('submit_quiz', { p_content_id, p_answers: { [questionId]: [optionId] } })` |
 | Página pública de verificação de certificado | `rpc('verify_certificate', { p_code })` (sem login) |
+| Botão "Enviar lembrete" (gestor/admin) | `rpc('send_reminder', { p_user_ids, p_message })` |
 | Relatório por pessoa / exportar CSV | view `report_learner_progress` |
 | Conformidade (obrigatórios: concluído, atrasado, vence em breve) | view `report_compliance` |
 | Painel da empresa | view `report_company_overview` |
@@ -54,6 +55,10 @@ seguinte e, para atrasados, toda segunda).
 - Convites para Marina (admin), Bruno (gestor), Carla, Diego e Elisa (colaboradores), com e-mails
   fictícios `@demo.example.com`.
 - A conta `hudsonelias66@gmail.com` é `platform_admin`.
+
+## Pessoas de demonstração (`seed_demo_people.sql`)
+
+Marina, Bruno, Carla, Diego e Elisa existem como registros de autenticação **sem senha** (só dados) e têm progresso realista. Hudson mora na Empresa Demonstração e é o gestor deles, para ver as três áreas com números reais. Diego está com a integração atrasada de propósito.
 
 ## Teste feito (27 verificações, em transação desfeita no fim)
 
