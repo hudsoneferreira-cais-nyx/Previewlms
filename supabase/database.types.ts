@@ -2039,6 +2039,10 @@ export type Database = {
         Args: { p_user_agent?: string }
         Returns: undefined
       }
+      send_reminder: {
+        Args: { p_message?: string; p_user_ids: string[] }
+        Returns: number
+      }
       submit_quiz: {
         Args: { p_answers: Json; p_content_id: string }
         Returns: Json
